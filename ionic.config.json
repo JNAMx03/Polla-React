@@ -1,0 +1,7 @@
+{
+  "name": "Polla-React",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
