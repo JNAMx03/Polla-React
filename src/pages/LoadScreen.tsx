@@ -1,0 +1,1 @@
+import { IonPage } from "@ionic/react";
