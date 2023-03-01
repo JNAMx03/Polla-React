@@ -1,6 +1,6 @@
 import { IonPage } from "@ionic/react";
 
-const Home: React.FC = () => {
+const LogInOrSignUp = () => {
     return (
       <IonPage>
         
@@ -8,4 +8,4 @@ const Home: React.FC = () => {
     );
   };
   
-export default Home;
+export default LogInOrSignUp;
