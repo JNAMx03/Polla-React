@@ -1,13 +1,13 @@
 import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonBackButton } from '@ionic/react';
 
 
-const Notif: React.FC = () => {
+function Notif() {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar color="primary">
             <IonButton slot='start'>
-                <IonBackButton defaultHref='/home'/>
+                <IonBackButton defaultHref='/Home/'/>
             </IonButton>
           <IonTitle>Notis</IonTitle>
         </IonToolbar>

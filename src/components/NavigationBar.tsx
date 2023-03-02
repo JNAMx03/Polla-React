@@ -4,7 +4,7 @@ import { IonReactRouter } from '@ionic/react-router';
 
 import { Route, Redirect } from 'react-router';
 
-import { playCircle, radio, library, search } from 'ionicons/icons';
+import { playCircle, radio, library, search, home, addOutline, wallet, person } from 'ionicons/icons';
 
 import HomePage from '../pages/Tabs/Home';
 import Notif from '../pages/Tabs/Notification';
@@ -18,38 +18,43 @@ function NavBar() {
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Redirect exact path="/" to="/home" />
+          <Redirect exact path="/Home" to="/Home" />
           {/*
           Use the render method to reduce the number of renders your component will have due to a route change.
 
           Use the component prop when your component depends on the RouterComponentProps passed in automatically.
         */}
-          <Route path="/home" render={() => <HomePage />} exact={true} />
-          <Route path="/home/Notis" render={() => <Notif />} exact={true}  />
+          <Route path="/Home" render={() => <HomePage />} exact={true} />
+          
           {/* <Route path="/radio" render={() => <RadioPage />} exact={true} />
           <Route path="/library" render={() => <LibraryPage />} exact={true} />
           <Route path="/search" render={() => <SearchPage />} exact={true} /> */}
         </IonRouterOutlet>
 
         <IonTabBar slot="bottom">
-          <IonTabButton tab="home" href="/home">
-            <IonIcon icon={playCircle} />
-            <IonLabel>Listen now</IonLabel>
+          <IonTabButton tab="Home" href="/Home">
+            <IonIcon icon={home} />
+            <IonLabel>Home</IonLabel>
           </IonTabButton>
 
-          <IonTabButton tab="radio" href="/radio">
-            <IonIcon icon={radio} />
-            <IonLabel>Radio</IonLabel>
-          </IonTabButton>
-
-          <IonTabButton tab="library" href="/library">
-            <IonIcon icon={library} />
-            <IonLabel>Library</IonLabel>
-          </IonTabButton>
-
-          <IonTabButton tab="search" href="/search">
+          <IonTabButton tab="Search" href="/Search">
             <IonIcon icon={search} />
-            <IonLabel>Search</IonLabel>
+            <IonLabel>Buscar</IonLabel>
+          </IonTabButton>
+
+          <IonTabButton tab="Create" href="/Create">
+            <IonIcon icon={addOutline} />
+            <IonLabel>Crear</IonLabel>
+          </IonTabButton>
+
+          <IonTabButton tab="Shop" href="/Shop">
+            <IonIcon icon={wallet} />
+            <IonLabel>Shop</IonLabel>
+          </IonTabButton>
+
+          <IonTabButton tab="Perfil" href="/Perfil">
+            <IonIcon icon={person} />
+            <IonLabel>Perfil</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

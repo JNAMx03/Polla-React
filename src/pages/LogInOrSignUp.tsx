@@ -6,7 +6,7 @@ const LogInOrSignUp = () => {
     const navigation = useIonRouter()
 
     const doLogin = () =>{
-        navigation.push('/home', 'root', 'replace');
+        navigation.push('/Home', 'root', 'replace');
     }
 
     return (
