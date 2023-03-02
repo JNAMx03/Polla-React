@@ -1,5 +1,6 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../../components/ExploreContainer';
+import NavBar from '../../components/NavigationBar';
 import './Home.css';
 
 const Home: React.FC = () => {
@@ -7,16 +8,17 @@ const Home: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Blank</IonTitle>
+          <IonTitle>Home</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer />
+
+      <IonContent>
+        <IonButton expand='full' routerLink='/home/Notis'>
+          con la barra
+        </IonButton>
+        <IonButton expand='full' routerLink='notif'>
+          sin la barra
+        </IonButton>
       </IonContent>
     </IonPage>
   );

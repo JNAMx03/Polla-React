@@ -21,6 +21,11 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import LogInOrSignUp from './pages/LogInOrSignUp';
+import NavBar from './components/NavigationBar';
+import Notif from './pages/Tabs/Notification';
+
+
 
 setupIonicReact();
 
@@ -28,12 +33,12 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route exact path="/home">
-          <Home />
-        </Route>
-        <Route exact path="/">
-          <Redirect to="/home" />
-        </Route>
+        <Route exact path="/" component={LogInOrSignUp}/>
+        <Route path="/home" component={NavBar}/>
+        <Route path="notif" component={Notif}/>
+
+
+   
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
