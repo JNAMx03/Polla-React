@@ -7,7 +7,7 @@ function Notif() {
       <IonHeader>
         <IonToolbar color="primary">
             <IonButton slot='start'>
-                <IonBackButton defaultHref='/Home/'/>
+                <IonBackButton defaultHref='/Home'/>
             </IonButton>
           <IonTitle>Notis</IonTitle>
         </IonToolbar>

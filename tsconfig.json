@@ -16,7 +16,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "isolatedModules": false, //estaba enverdadero, lo cambio por que me daba un error dentro ne NavigationBar con el import de Home. 24/3/23
     "noEmit": true,
     "jsx": "react-jsx"
   },

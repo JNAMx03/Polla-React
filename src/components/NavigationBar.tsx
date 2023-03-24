@@ -4,13 +4,14 @@ import { IonReactRouter } from '@ionic/react-router';
 
 import { Route, Redirect } from 'react-router';
 
-import { playCircle, radio, library, search, home, addOutline, wallet, person } from 'ionicons/icons';
+import { search, home, addOutline, wallet, person } from 'ionicons/icons';
 
-import HomePage from '../pages/Tabs/Home';
-import Notif from '../pages/Tabs/Notification';
-// import RadioPage from './pages/RadioPage';
-// import LibraryPage from './pages/LibraryPage';
-// import SearchPage from './pages/SearchPage';
+import Home from '../pages/Tabs/Home/Home';
+import Search from '../pages/Tabs/Search/Search';
+import Create from '../pages/Tabs/Create/Create';
+import Shop from '../pages/Tabs/Shop/Shop';
+import Perfil from '../pages/Tabs/Perfil/Perfil';
+
 
 
 function NavBar() {
@@ -24,17 +25,17 @@ function NavBar() {
 
           Use the component prop when your component depends on the RouterComponentProps passed in automatically.
         */}
-          <Route path="/Home" render={() => <HomePage />} exact={true} />
-          
-          {/* <Route path="/radio" render={() => <RadioPage />} exact={true} />
-          <Route path="/library" render={() => <LibraryPage />} exact={true} />
-          <Route path="/search" render={() => <SearchPage />} exact={true} /> */}
+          <Route path="/Home" render={() => <Home />} exact={true} />
+          <Route path="/Search" render={() => <Search />} exact={true} />
+          <Route path="/Create" render={() => <Create />} exact={true} />
+          <Route path="/Shop" render={() => <Shop />} exact={true} />
+          <Route path="/Perfil" render={() => <Perfil />} exact={true} />
         </IonRouterOutlet>
 
         <IonTabBar slot="bottom">
           <IonTabButton tab="Home" href="/Home">
             <IonIcon icon={home} />
-            <IonLabel>Home</IonLabel>
+            <IonLabel>Inicio</IonLabel>
           </IonTabButton>
 
           <IonTabButton tab="Search" href="/Search">
@@ -49,7 +50,7 @@ function NavBar() {
 
           <IonTabButton tab="Shop" href="/Shop">
             <IonIcon icon={wallet} />
-            <IonLabel>Shop</IonLabel>
+            <IonLabel>Tienda</IonLabel>
           </IonTabButton>
 
           <IonTabButton tab="Perfil" href="/Perfil">
